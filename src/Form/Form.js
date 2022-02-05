@@ -52,7 +52,9 @@ const Form = () => {
         return (
           <div className="container">
             <div className="container_gb">
-              <h1>Вы можете авторизоваться с помощью Google Account:</h1>
+              <h1 className="title_gb">
+                Вы можете авторизоваться с помощью Google Account:
+              </h1>
               <form onSubmit={handleSubmit} className="container_form">
                 <button type="buttton" className="gb">
                   GOOGLE
@@ -60,7 +62,7 @@ const Form = () => {
               </form>
             </div>
             <div className="container_register">
-              <h1>
+              <h1 className="title_register">
                 Или зайти с помощью e-mail и пароля, предварительно
                 зарегистрировавшись:
               </h1>
