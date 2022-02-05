@@ -66,7 +66,7 @@ const Form = () => {
                 зарегистрировавшись:
               </h1>
               <div className="form-row">
-                <label htmlFor="email">*Электронная почта:</label>
+                <label htmlFor="email">Электронная почта:</label>
                 <input
                   type="email"
                   name="email"
@@ -85,12 +85,12 @@ const Form = () => {
               </div>
 
               <div className="form-row">
-                <label htmlFor="password">*Пароль:</label>
+                <label htmlFor="password">Пароль:</label>
                 <input
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="••••••••"
+                  placeholder="Пароль"
                   value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
