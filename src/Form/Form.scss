@@ -2,19 +2,10 @@ $primary-color: rgba(255, 107, 8, 0.35);
 $error-color: #e63946;
 $bg-color: #f1faee;
 
-$background: #f6f7fb;
-$border-radius: 30px;
-
-body {
-  color: rgb(217, 239, 250);
-}
-
 // mobile
 @media screen and (max-width: 767.98px) {
   .container {
     max-width: 320px;
-    top: 255px;
-    margin: 0 auto;
 
     background: var(--main-background-color);
     box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
@@ -36,7 +27,7 @@ body {
     input {
       width: 253px;
       height: 52px;
-      font-size: 14px;
+      font-size: var(--second-font-size);
       line-height: 16px;
 
       color: var(--placeholders-text-color);
@@ -60,7 +51,7 @@ body {
       color: var(--main-text-color);
       width: 125px;
       height: 44px;
-      font-size: 12px;
+      font-size: var(--main-font-size);
       line-height: 1.17%;
       background: var(--second-background-color);
       cursor: pointer;
@@ -117,8 +108,7 @@ body {
     input {
       width: 265px;
       height: 52px;
-      font-size: 14px;
-      line-height: 1.14%;
+      font-size: var(--second-font-size);
 
       color: var(--placeholders-text-color);
       border: none;
@@ -141,8 +131,7 @@ body {
       color: var(--main-text-color);
       width: 125px;
       height: 44px;
-      font-size: 12px;
-      line-height: 1.17%;
+      font-size: var(--main-font-size);
       background: var(--second-background-color);
       cursor: pointer;
       border-radius: 16px;
@@ -183,14 +172,13 @@ body {
     margin-left: 734px;
 
     h1 {
-      font-size: 12px;
+      font-size: var(--main-font-size);
       color: var(--main-text-color);
       padding: 30px 0 20px 0;
     }
 
     label {
       font-size: 10px;
-      line-height: 1.2%;
       padding-bottom: 12px;
       color: var(--dark-text-color);
       padding-bottom: 10px;
@@ -199,9 +187,7 @@ body {
     input {
       width: 265px;
       height: 52px;
-      font-size: 14px;
-      line-height: 1.14%;
-
+      font-size: var(--second-font-size);
       color: var(--placeholders-text-color);
       border: none;
       border-radius: 30px;
@@ -223,8 +209,7 @@ body {
       color: var(--main-text-color);
       width: 125px;
       height: 44px;
-      font-size: 12px;
-      line-height: 1.17%;
+      font-size: var(--main-font-size);
       background: var(--second-background-color);
       cursor: pointer;
       border-radius: 16px;
