@@ -15,7 +15,6 @@ body {
     max-width: 320px;
     top: 255px;
     margin: 0 auto;
-    padding: 0 10px;
 
     background: var(--main-background-color);
     box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
@@ -97,7 +96,6 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279.98px) {
   .container {
     max-width: 436px;
-    padding: 0 166px;
 
     background: var(--main-background-color);
     box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
