@@ -51,72 +51,67 @@ const Form = () => {
         } = formik;
         return (
           <div className="container">
-            <div className="container_gb">
+            <form onSubmit={handleSubmit} className="container_form">
               <h1 className="title_gb">
                 Вы можете авторизоваться с помощью Google Account:
               </h1>
-              <form onSubmit={handleSubmit} className="container_form">
-                <button type="buttton" className="gb">
-                  GOOGLE
-                </button>
-              </form>
-            </div>
-            <div className="container_register">
+              <button type="buttton" className="gb">
+                GOOGLE
+              </button>
+            </form>
+
+            <form onSubmit={handleSubmit} className="container_form">
               <h1 className="title_register">
                 Или зайти с помощью e-mail и пароля, предварительно
                 зарегистрировавшись:
               </h1>
-              <form onSubmit={handleSubmit} className="container_form">
-                <div className="form-row">
-                  <label htmlFor="email">*Электронная почта:</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="your@email.com"
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={
-                      errors.email && touched.email ? 'input-error' : null
-                    }
-                  />
-                  <p className="">это обязательное поле</p>
-                  {errors.email && touched.email && (
-                    <span className="error">{errors.email}</span>
-                  )}
-                </div>
+              <div className="form-row">
+                <label htmlFor="email">*Электронная почта:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="your@email.com"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.email && touched.email ? 'input-error' : null
+                  }
+                />
+                {errors.email && touched.email && (
+                  <span className="error">{errors.email}</span>
+                )}
+              </div>
 
-                <div className="form-row">
-                  <label htmlFor="password">*Пароль:</label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="••••••••"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    className={
-                      errors.password && touched.password ? 'input-error' : null
-                    }
-                  />
-                  <p className="">это обязательное поле</p>
-                  {errors.password && touched.password && (
-                    <span className="error">{errors.password}</span>
-                  )}
-                </div>
+              <div className="form-row">
+                <label htmlFor="password">*Пароль:</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="••••••••"
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.password && touched.password ? 'input-error' : null
+                  }
+                />
+                {errors.password && touched.password && (
+                  <span className="error">{errors.password}</span>
+                )}
+              </div>
 
-                <button
-                  type="submit"
-                  className={!(dirty && isValid) ? 'disabled-btn' : ''}
-                  disabled={!(dirty && isValid)}
-                >
-                  ВОЙТИ
-                </button>
-                <button type="button">РЕГИСТРАЦИЯ</button>
-              </form>
-            </div>
+              <button
+                type="submit"
+                className={!(dirty && isValid) ? 'disabled-btn' : ''}
+                disabled={!(dirty && isValid)}
+              >
+                ВОЙТИ
+              </button>
+              <button type="button">РЕГИСТРАЦИЯ</button>
+            </form>
           </div>
         );
       }}

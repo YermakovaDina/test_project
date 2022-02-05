@@ -1,187 +1,75 @@
 $primary-color: rgba(255, 107, 8, 0.35);
 $error-color: #e63946;
 $bg-color: #f1faee;
-$text-color: #52555f;
-$color-white: #fff;
 
-$border-radius: 4px;
+$background: #f6f7fb;
+$border-radius: 30px;
 
 body {
   color: rgb(217, 239, 250);
 }
 
-// ====
 // mobile
 @media screen and (max-width: 767.98px) {
   .container {
-    position: absolute;
-    width: 300px;
-    height: 535px;
-    left: 10px;
+    max-width: 320px;
     top: 255px;
+    margin: 0 auto;
+    padding: 0 10px;
 
-    background: #ffffff;
-    /* shadow mob */
-
+    background: var(--main-background-color);
     box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
     border-radius: 30px;
 
-    /* margin-top: 5rem; */
-    /* padding: 3rem; */
-    /* border-radius: $border-radius; */
-
     h1 {
       font-size: 10px;
-      height: 1.2;
-      color: #52555f;
+      color: var(--main-text-color);
       padding-bottom: 24px;
     }
 
-    label,
+    label {
+      font-size: 10px;
+      line-height: 1.2%;
+      padding-bottom: 12px;
+      color: var(--dark-text-color);
+    }
+
     input {
-      color: #a6abb9;
       width: 253px;
       height: 52px;
-      left: 39px;
-      top: 485px;
+      font-size: 14px;
+      line-height: 16px;
 
-      background: #f6f7fb;
+      color: var(--placeholders-text-color);
+      border: none;
       border-radius: 30px;
+      padding-left: 29px;
+      background: var(--second-background-color);
     }
 
-    label {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    input {
-      border: 2px solid rgba($primary-color, 0.8);
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      padding-left: 1rem;
-      font-size: 1rem;
+    .container_form {
+      padding: 0 85px 20px;
     }
 
     .form-row {
       display: flex;
       flex-direction: column;
-      margin-left: 29px;
+      padding-top: 50px;
     }
 
     button {
-      color: $color-white;
-      width: 100%;
-      font-size: 1.4rem;
-      background: $primary-color;
-      border-radius: 4px;
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem 1.2rem;
-      margin-top: 0.5rem;
-
-      &:hover {
-        background: rgba($primary-color, 0.8);
-      }
-    }
-
-    .input-error {
-      border-color: $error-color;
-    }
-
-    .error {
-      color: $error-color;
-      font-size: 1rem;
-      margin-top: 0.3rem;
-    }
-
-    .disabled-btn {
-      cursor: not-allowed;
-      background: rgba($primary-color, 0.8);
-    }
-  }
-}
-
-// -----
-.container {
-  max-width: 320px;
-  top: 255px;
-  margin: 0 auto;
-  padding: 0 10px;
-
-  .title_gb {
-    justify-content: center;
-  }
-
-  @media screen and (min-width: 768px) {
-    max-width: 665px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    max-width: 885px;
-  }
-}
-// -----
-
-// desktop
-@media screen and (min-width: 1280px) {
-  .container {
-    position: absolute;
-    width: 436px;
-    height: 535px;
-    left: 734px;
-    top: 173px;
-
-    background: #ffffff;
-    /* shadow 1 */
-
-    box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
-    border-radius: 30px;
-
-    /* margin-top: 5rem; */
-    /* padding: 3rem; */
-    /* border-radius: $border-radius; */
-
-    h1 {
+      color: var(--main-text-color);
+      width: 125px;
+      height: 44px;
       font-size: 12px;
-      height: 1.16;
-      color: #52555f;
-      margin-bottom: 2rem;
-    }
-
-    label,
-    input {
-      color: #52555f;
-    }
-
-    label {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    input {
-      border: 2px solid rgba($primary-color, 0.8);
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      padding-left: 1rem;
-      font-size: 1rem;
-    }
-
-    .form-row {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1.5rem;
-    }
-
-    button {
-      color: $color-white;
-      width: 100%;
-      font-size: 1.4rem;
-      background: $primary-color;
-      border-radius: 4px;
-      border: none;
+      line-height: 1.17%;
+      background: var(--second-background-color);
       cursor: pointer;
-      padding: 0.4rem 1.2rem;
-      margin-top: 0.5rem;
+      border-radius: 16px;
+      border: none;
+      align-content: stretch;
+
+      filter: drop-shadow(1px 3px 5px rgba(82, 85, 95, 0.15));
 
       &:hover {
         background: rgba($primary-color, 0.8);
@@ -208,63 +96,144 @@ body {
 // tablet
 @media screen and (min-width: 768px) and (max-width: 1279.98px) {
   .container {
-    position: absolute;
-    width: 436px;
-    height: 535px;
-    left: 734px;
-    top: 173px;
+    max-width: 436px;
+    padding: 0 166px;
 
-    background: #ffffff;
-    /* shadow 1 */
-
-    box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+    background: var(--main-background-color);
+    box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
     border-radius: 30px;
 
-    /* margin-top: 5rem; */
-    /* padding: 3rem; */
-    /* border-radius: $border-radius; */
-
     h1 {
-      font-size: 12px;
-      height: 1.16;
-      color: #52555f;
-      margin-bottom: 2rem;
-    }
-
-    label,
-    input {
-      color: #52555f;
+      font-size: 10px;
+      color: var(--main-text-color);
+      padding-bottom: 24px;
     }
 
     label {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
+      font-size: 10px;
+      line-height: 1.2%;
+      padding-bottom: 12px;
+      color: var(--dark-text-color);
     }
 
     input {
-      border: 2px solid rgba($primary-color, 0.8);
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      padding-left: 1rem;
-      font-size: 1rem;
+      width: 265px;
+      height: 52px;
+      font-size: 14px;
+      line-height: 1.14%;
+
+      color: var(--placeholders-text-color);
+      border: none;
+      border-radius: 30px;
+      padding-left: 29px;
+      background: var(--second-background-color);
+    }
+
+    .container_form {
+      padding: 0 85px 20px;
     }
 
     .form-row {
       display: flex;
       flex-direction: column;
-      margin-bottom: 1.5rem;
+      padding-top: 50px;
     }
 
     button {
-      color: $color-white;
-      width: 100%;
-      font-size: 1.4rem;
-      background: $primary-color;
-      border-radius: 4px;
-      border: none;
+      color: var(--main-text-color);
+      width: 125px;
+      height: 44px;
+      font-size: 12px;
+      line-height: 1.17%;
+      background: var(--second-background-color);
       cursor: pointer;
-      padding: 0.4rem 1.2rem;
-      margin-top: 0.5rem;
+      border-radius: 16px;
+      border: none;
+      align-content: stretch;
+
+      filter: drop-shadow(1px 3px 5px rgba(82, 85, 95, 0.15));
+
+      &:hover {
+        background: rgba($primary-color, 0.8);
+      }
+    }
+
+    .input-error {
+      border-color: $error-color;
+    }
+
+    .error {
+      color: $error-color;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    .disabled-btn {
+      cursor: not-allowed;
+      background: rgba($primary-color, 0.8);
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 436px;
+    background: var(--main-background-color);
+    box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
+    border-radius: 30px;
+    margin-left: 734px;
+
+    h1 {
+      font-size: 12px;
+      color: var(--main-text-color);
+      padding: 30px 0 20px 0;
+    }
+
+    label {
+      font-size: 10px;
+      line-height: 1.2%;
+      padding-bottom: 12px;
+      color: var(--dark-text-color);
+      padding-bottom: 10px;
+    }
+
+    input {
+      width: 265px;
+      height: 52px;
+      font-size: 14px;
+      line-height: 1.14%;
+
+      color: var(--placeholders-text-color);
+      border: none;
+      border-radius: 30px;
+      padding-left: 29px;
+      background: var(--second-background-color);
+    }
+
+    .container_form {
+      padding: 0 85px 20px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+    }
+
+    button {
+      color: var(--main-text-color);
+      width: 125px;
+      height: 44px;
+      font-size: 12px;
+      line-height: 1.17%;
+      background: var(--second-background-color);
+      cursor: pointer;
+      border-radius: 16px;
+      border: none;
+      align-content: stretch;
+
+      filter: drop-shadow(1px 3px 5px rgba(82, 85, 95, 0.15));
 
       &:hover {
         background: rgba($primary-color, 0.8);
