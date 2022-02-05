@@ -28,7 +28,7 @@
 
 body {
   font-family: 'Roboto', normal;
-  color: rgb(217, 239, 250);
+  background-color: var(--main-background-color);
 }
 
 ul {
