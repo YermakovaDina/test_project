@@ -1,11 +1,14 @@
 import React from 'react';
-import Form from './Form/Form';
 
-// import "./App.css";
+import Test from './components/test/test';
+import Form from './components/Form/FormReg';
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Test />
       <Form />
     </div>
   );
